@@ -14,7 +14,7 @@ export const Search = ({ handleSearch }) => {
 	}
 
 	return (
-		<div className="flex w-full min-h-10 py-2 justify-center items-center">
+		<div className="flex w-full py-2 justify-center items-center">
 			<form
 				className="min-w-40 flex px-4 py-2 gap-x-2 items-center justify-center bg-dark-100 border-solid border-2 border-dark-300 rounded-xl"
 				role="search"
