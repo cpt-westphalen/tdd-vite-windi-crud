@@ -3,17 +3,17 @@ import { useState } from 'react';
 export const ProductCard = ({ product = {} }) => {
 	const [selectedQuantity, setSelectedQuantity] = useState(0);
 
-	function handleAdd() {
+	function handlePlusClick() {
 		setSelectedQuantity(selectedQuantity + 1);
 	}
-	function handleRemove() {
+	function handleMinusClick() {
 		if (selectedQuantity > 0) {
 			setSelectedQuantity(selectedQuantity - 1);
 		}
 	}
 
 	return (
-		<article className="card-container">
+		<article className="card-container" aria-label={product.title}>
 			<div className="card-heading">
 				<div className="card-farmer">
 					{product.producer || 'Produtor Fulano'}
@@ -41,15 +41,30 @@ export const ProductCard = ({ product = {} }) => {
 					<div className="card-prices-new">R$ 31,99</div>
 				</div>
 				<div className="card-quantity-container">
-					<button onClick={handleRemove} className="card-quantity-minus">
+					<button
+						onClick={handleMinusClick}
+						disabled={selectedQuantity === 0}
+						className="card-quantity-minus"
+						aria-label="decrease selected quantity"
+					>
 						-
 					</button>
 					<div className="card-quantity-number">{selectedQuantity}</div>
-					<button onClick={handleAdd} className="card-quantity-plus">
+					<button
+						onClick={handlePlusClick}
+						disabled={selectedQuantity >= product.stock}
+						className="card-quantity-plus"
+						aria-label="increase selected quantity"
+					>
 						+
 					</button>
 				</div>
-				<button className="card-add-btn">Adicionar</button>
+				<button
+					className="card-add-btn"
+					disabled={selectedQuantity === 0 || selectedQuantity >= product.stock}
+				>
+					Add to Cart
+				</button>
 			</div>
 		</article>
 	);

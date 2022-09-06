@@ -20,7 +20,7 @@ describe('<Header/>', () => {
 	});
 	it('should have a cart icon with link', () => {
 		render(<Header />);
-		const cartIcon = screen.getByRole('link', { name: 'shopping cart' });
-		expect(cartIcon).toBeVisible();
+		const cartLink = screen.getByRole('link', { name: 'shopping cart' });
+		expect(cartLink).toBeVisible();
 	});
 });
