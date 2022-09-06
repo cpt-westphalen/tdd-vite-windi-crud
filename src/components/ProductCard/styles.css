@@ -1,0 +1,9 @@
+.card-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	border: solid 1px #3a3a3a;
+	padding: 6px;
+	border-radius: 12px;
+}

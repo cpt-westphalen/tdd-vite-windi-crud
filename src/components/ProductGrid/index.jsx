@@ -1,5 +1,4 @@
 import { ProductCard } from '../ProductCard';
-import './styles.css';
 
 export const ProductGrid = ({ list = [] }) => {
 	const productsToShow = () => {
@@ -9,7 +8,7 @@ export const ProductGrid = ({ list = [] }) => {
 		return <p>Ops, no products to show!</p>;
 	};
 	return (
-		<main className="flex flex-col items-center justify-center w-full px-5 lg:w-230 xl:w-300">
+		<main className="flex flex-col items-center justify-center w-full px-5 lg:w-240 xl:w-310">
 			<h2 className="text-2xl font-extrabold mt-10 mb-5 self-start">
 				Products
 			</h2>

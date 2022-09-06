@@ -7,7 +7,7 @@ import { Mocks } from './test/Mocks';
 
 function App() {
 	return (
-		<div className="flex m-0 p-0 flex-col items-center min-w-xs h-screen">
+		<div className="flex m-0 p-0 pb-30 flex-col items-center min-w-xs min-h-screen">
 			<Header />
 			<Search handleSearch={handleSearch} />
 			<ProductGrid list={Mocks.productList} />

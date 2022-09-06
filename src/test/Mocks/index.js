@@ -5,7 +5,7 @@ const product = {
 	title: 'Alface',
 	unit: '220 g',
 	badges: ['organic', 'agroforestry', 'vegan'],
-	prices: [31.99, 59.99],
+	prices: [2.59, 4.49],
 	stock: 4,
 };
 
@@ -18,7 +18,7 @@ const productList = [
 		title: 'Rúcula',
 		unit: '150 g',
 		badges: ['organic', 'agroforestry', 'vegan'],
-		prices: [4.99, 3.99],
+		prices: [3.99, 4.99],
 		stock: 8,
 	},
 ];
