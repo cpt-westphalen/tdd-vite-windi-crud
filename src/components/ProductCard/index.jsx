@@ -15,13 +15,14 @@ export const ProductCard = ({ product = {} }) => {
 
 	return (
 		<article
+			tabIndex={0}
 			className='p-3 flex flex-col justify-start items-stretch border-1 border-solid border-zinc-600 rounded-xl'
 			aria-label={product.title}>
 			<div className='flex justify-between items-baseline pt-2 border-b border-solid border-b-zinc-700'>
 				<h3 className='text-2xl font-bold'>
 					{product.title || "Nome Produto"}
 				</h3>
-				<p className='text-base text-zinc-300'>
+				<p className='flex-shrink-0 self-end text-base text-zinc-300'>
 					{product.unit || "500 g"}
 				</p>
 			</div>
@@ -36,8 +37,8 @@ export const ProductCard = ({ product = {} }) => {
 					"[ imagem destaque ]"}
 			</div>
 			<div className='flex justify-between items-center'>
-				<p className='font-bold'>
-					{product.producer || "Produtor Fulano"}
+				<p className='text-sm'>
+					{`Por: ${product.producer}` || "Produtor Fulano"}
 				</p>
 				<button className='text-xs flex justify-center items-center m-0 p-0 w-6 text-center h-6 rounded-full'>
 					?
@@ -68,7 +69,9 @@ export const ProductCard = ({ product = {} }) => {
 							-
 						</button>
 					</div>
-					<div className='flex flex-1 items-center justify-center'>
+					<div
+						aria-label='amount selected'
+						className='flex flex-1 items-center justify-center'>
 						{selectedQuantity}
 					</div>
 					<div className='flex flex-1 items-center justify-center'>
