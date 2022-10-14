@@ -47,6 +47,8 @@ button:focus-visible {
 }
 button:disabled {
 	color: #444;
+	border: transparent;
+	pointer-events: none;
 }
 
 @media (prefers-color-scheme: light) {
